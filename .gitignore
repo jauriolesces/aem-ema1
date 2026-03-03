@@ -8,6 +8,10 @@ helix-importer-ui
 *.bak
 .idea
 
+# Screenshots and development artifacts
+*.png
+*.jpeg
+
 # Ensure these files are tracked
 !CLAUDE.md
 !AGENTS.md
