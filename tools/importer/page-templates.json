@@ -1,0 +1,58 @@
+{
+  "templates": [
+    {
+      "name": "wknd-trendsetters-homepage",
+      "urls": ["https://wknd-trendsetters.site"],
+      "description": "WKND Trendsetters homepage with hero columns, article intro, photo gallery, testimonials tabs, article cards, FAQ accordion, and CTA hero banner",
+      "blocks": [
+        {
+          "name": "section-secondary",
+          "instances": [
+            "header.section.secondary-section",
+            "section.section.secondary-section"
+          ],
+          "section": "secondary-section"
+        },
+        {
+          "name": "section-inverse",
+          "instances": [
+            "section.section.inverse-section"
+          ],
+          "section": "inverse-section"
+        },
+        {
+          "name": "columns",
+          "instances": [
+            "header.section.secondary-section > .container > .grid-layout",
+            "main > section:nth-child(2) > .container > .grid-layout",
+            ".grid-layout.desktop-4-column:has(> .utility-aspect-1x1)"
+          ]
+        },
+        {
+          "name": "tabs",
+          "instances": [
+            ".tabs-wrapper"
+          ]
+        },
+        {
+          "name": "cards",
+          "instances": [
+            ".grid-layout:has(> .article-card)"
+          ]
+        },
+        {
+          "name": "accordion",
+          "instances": [
+            ".faq-list"
+          ]
+        },
+        {
+          "name": "hero",
+          "instances": [
+            "section.section.inverse-section .utility-position-relative"
+          ]
+        }
+      ]
+    }
+  ]
+}

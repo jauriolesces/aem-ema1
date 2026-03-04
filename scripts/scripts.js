@@ -114,10 +114,26 @@ function decorateButtons(main) {
 }
 
 /**
+ * Moves instrumentation data attributes from source to target element.
+ * @param {Element} source The source element
+ * @param {Element} target The target element
+ */
+// eslint-disable-next-line import/prefer-default-export
+export function moveInstrumentation(source, target) {
+  if (source && target) {
+    [...source.attributes]
+      .filter(({ name }) => name.startsWith('data-aue-') || name.startsWith('data-richtext-'))
+      .forEach(({ name, value }) => {
+        target.setAttribute(name, value);
+        source.removeAttribute(name);
+      });
+  }
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
-// eslint-disable-next-line import/prefer-default-export
 export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);

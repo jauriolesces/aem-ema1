@@ -1,5 +1,6 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--dark-color);
+  color: var(--background-color);
   font-size: var(--body-font-size-xs);
 }
 
@@ -13,8 +14,69 @@ footer .footer p {
   margin: 0;
 }
 
+footer .footer a:any-link {
+  color: #999;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  color: var(--background-color);
+}
+
+/* footer brand section */
+footer .footer > div > .section:first-child {
+  margin-bottom: var(--space-2xl);
+}
+
+footer .footer > div > .section:first-child a {
+  font-family: var(--heading-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+/* footer link columns */
+footer .footer > div > .section:last-child .default-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+}
+
+footer .footer > div > .section:last-child ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer > div > .section:last-child ul li {
+  margin-bottom: var(--space-lg);
+}
+
+footer .footer > div > .section:last-child ul li strong {
+  font-family: var(--heading-font-family);
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #999;
+  display: block;
+  margin-bottom: var(--space-lg);
+}
+
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 80px 32px 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-3xl);
+  }
+
+  footer .footer > div > .section:first-child {
+    margin-bottom: 0;
+  }
+
+  footer .footer > div > .section:last-child .default-content-wrapper {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
